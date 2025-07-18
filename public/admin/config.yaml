@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "business"
+    label: "Booming Businesses"
+    folder: "content/business"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image" }
+  - name: "nature"
+    label: "Nature Spots"
+    folder: "content/nature"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image" }
